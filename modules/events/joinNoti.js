@@ -14,7 +14,7 @@ module.exports.run = async function({ api, event, Users }) {
 	const { threadID } = event;
 	if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
 		api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by CatalizCS and SpermLord" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
-		return api.sendMessage(`Kết nối thành công.Bot đã đặt chân tới đây 😎 Dùng !help để biết tất cả lệnh `, threadID);
+		return api.sendMessage(`Kết nối thành công ○~● Sử dụng !help để biết full lệnh của bot|||  !help + tên lệnh để biết chi tiết về lệnh\n-----------------------\n  Bot name : D U C K \n Prefix (dấu lệnh) : ! \n ☡Nghiêm cấm tuyệt đối mọi hành vi spam,report,war bot nếu bị phát hiện sẽ ăn ban vĩnh viễn☡ \n Mọi thắc mắc xin liên hệ fb Admin : https://www.facebook.com/Ducvjp.Admin.2006`, threadID);
 	}
 	else {
 		try {
@@ -23,7 +23,7 @@ module.exports.run = async function({ api, event, Users }) {
 
 			const threadData = global.data.threadData.get(parseInt(threadID)) || {};
 			const path = join(__dirname, "cache", "joinGif");
-			const pathGif = join(path, `duck.gif`);
+			const pathGif = join(path, `chao.gif`);
 
 			var mentions = [], nameArray = [], memLength = [], i = 0;
 			
@@ -41,10 +41,10 @@ module.exports.run = async function({ api, event, Users }) {
 			}
 			memLength.sort((a, b) => a - b);
 			
-			(typeof threadData.customJoin == "undefined") ? msg = "𝙃𝙚𝙡𝙡𝙤 𝙘𝙤𝙣 𝙫𝙤̛̣ {name}.\n𝘾𝙝𝙖̀𝙤 𝙢𝙪̛̀𝙣𝙜 đ𝙖̃ đ𝙚̂́𝙣 𝙫𝙤̛́𝙞 {threadName}.\n{type} 𝙡𝙖̀ 𝙩𝙝𝙖̀𝙣𝙝 𝙫𝙞𝙚̂𝙣 𝙩𝙝𝙪̛́ {soThanhVien} 𝙘𝙪̉𝙖 𝙣𝙝𝙤́𝙢. 𝙏𝙪̛𝙤̛𝙣𝙜 𝙩𝙖́𝙘 𝙣𝙝𝙞𝙚̂̀𝙪 𝙫𝙖̀𝙤 𝙣𝙝𝙖 𝙠𝙝𝙤̂𝙣𝙜 𝙡𝙖̀ 𝙖̆𝙣 𝙠𝙞𝙘𝙠 đ𝙖̂́𝙮5 ♥" : msg = threadData.customJoin;
+			(typeof threadData.customJoin == "undefined") ? msg = "𝐻𝑒𝑙𝑙𝑜 𝑐𝑜𝑛 𝑣𝑜̛̣ {name}.\n𝐶ℎ𝑎̀𝑜 𝑚𝑢̛̀𝑛𝑔 đ𝑎̃ đ𝑒̂́𝑛 𝑣𝑜̛́𝑖 {threadName}.\n{type} 𝑙𝑎̀ 𝑡ℎ𝑎̀𝑛ℎ 𝑣𝑖𝑒̂𝑛 𝑡ℎ𝑢̛́ {soThanhVien} 𝑐𝑢̉𝑎 𝑛ℎ𝑜́𝑚. 𝑇𝑢̛𝑜̛𝑛𝑔 𝑡𝑎́𝑐 𝑛ℎ𝑖𝑒̂̀𝑢 𝑣𝑎̀𝑜 𝑛ℎ𝑎 𝑘ℎ𝑜̂𝑛𝑔 𝑙𝑎̀ 𝑏𝑖̣ 𝑎̆𝑛 𝑘𝑖𝑐𝑘 đ𝑜́ 💜💜💜" : msg = threadData.customJoin;
 			msg = msg
 			.replace(/\{name}/g, nameArray.join(', '))
-			.replace(/\{type}/g, (memLength.length > 1) ?  'các bạn' : 'bạn')
+			.replace(/\{type}/g, (memLength.length > 1) ?  '𝑐𝑎́𝑐 𝑏𝑎̣𝑛' : '𝑏𝑎̣𝑛')
 			.replace(/\{soThanhVien}/g, memLength.join(', '))
 			.replace(/\{threadName}/g, threadName);
 
