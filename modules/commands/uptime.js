@@ -1,8 +1,8 @@
 module.exports.config = {
-	name:"uptime",
+	name:"upt",
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "DuyVuong",
+	credits: "HTHB",
 	description: "Random ảnh theo api - uptime",
 	commandCategory: "system",
 	cooldowns: 3
@@ -17,20 +17,22 @@ module.exports.run = async ({ api, event }) => {
 	const axios = require('axios');
 	const request = require('request');
 	const fs = require("fs");
+	const moment = require("moment-timezone");
+    var gio = moment.tz("Asia/Ho_Chi_Minh").format("HH:mm:ss");
 const time = process.uptime(),
 		hours = Math.floor(time / (60 * 60)),
 		minutes = Math.floor((time % (60 * 60)) / 60),
 		seconds = Math.floor(time % 60);
 	const pidusage = await global.nodemodule["pidusage"](process.pid);
 	const timeStart = Date.now();
-	axios.get('https://api.vangbanlanhat.tk/image?type=wibu').then(res => {
-	let ext = res.data.data.substring(res.data.data.lastIndexOf(".") + 1);
+	axios.get('https://img-hololive-api.up.railway.app/rushia/').then(res => {
+	let ext = res.data.url.substring(res.data.url.lastIndexOf(".") + 1);
 	let callback = function () {
 					api.sendMessage({
-                                                body: `Bot của Đức đã hoạt động được ${hours} giờ ${minutes} phút ${seconds} giây.\n\n❯ Tổng người dùng: ${global.data.allUserID.length}\n❯ Tổng nhóm: ${global.data.allThreadID.length}\n❯ Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}\n❯ Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n❯ Ping: ${Date.now() - timeStart}`,
-						attachment: fs.createReadStream(__dirname + `/cache/wibu.${ext}`)
-					}, event.threadID, () => fs.unlinkSync(__dirname + `/cache/wibu.${ext}`), event.messageID);
+                                                body: `Hiện tại đang là: ${gio} và bot của Đức đã hoạt động được ${hours} giờ ${minutes} phút ${seconds} giây.\n🐳Prefix: ${global.config.PREFIX}\n🐳Version: 1.2.15\n🐳Tổng người dùng: ${global.data.allUserID.length}\n🐳Tổng nhóm: ${global.data.allThreadID.length}\n🐳Cpu đang sử dụng: ${pidusage.cpu.toFixed(1)}\n🐳Ram đang sử dụng: ${byte2mb(pidusage.memory)}\n🐳Ping: ${Date.now() - timeStart}ms`,
+						attachment: fs.createReadStream(__dirname + `/cache/anh.${ext}`)
+					}, event.threadID, () => fs.unlinkSync(__dirname + `/cache/anh.${ext}`), event.messageID);
 				};
-				request(res.data.data).pipe(fs.createWriteStream(__dirname + `/cache/wibu.${ext}`)).on("close", callback);
+				request(res.data.url).pipe(fs.createWriteStream(__dirname + `/cache/anh.${ext}`)).on("close", callback);
 			})
 }
