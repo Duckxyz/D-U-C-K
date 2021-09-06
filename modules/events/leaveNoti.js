@@ -17,14 +17,14 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const { threadID } = event;
 	const data = global.data.threadData.get(parseInt(threadID)) || (await Threads.getData(threadID)).data;
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
-	const type = (event.author == event.logMessageData.leftParticipantFbId) ? " 𝙫𝙞̀ 𝙠𝙝𝙤̂𝙣𝙜 𝙩𝙖́𝙣 đ𝙤̂̉ 𝙚𝙢 𝙣𝙖̀𝙤 𝙣𝙚̂𝙣 đ𝙖̃ 𝙩𝙪̛̣ 𝙘𝙪́𝙩 𝙠𝙝𝙤̉𝙞 𝙣𝙝𝙤́𝙢, 𝙑𝙞̃𝙣𝙝 𝙗𝙞𝙚̣̂𝙩 𝙚𝙢 𝙣𝙝𝙚́ ❤" : " 𝙫𝙞̀ 𝙠𝙝𝙤̂𝙣𝙜 𝙩𝙖́𝙣 đ𝙤̂̉ 𝙚𝙢 𝙣𝙖̀𝙤 𝙣𝙚̂𝙣 đ𝙖̃ 𝙗𝙞̣ 𝙦𝙪𝙖̉𝙣 𝙩𝙧𝙞̣ 𝙫𝙞𝙚̂𝙣 đ𝙪𝙤̂̉𝙞 𝙠𝙝𝙤̉𝙞 𝙣𝙝𝙤́𝙢, 𝙑𝙞̃𝙣𝙝 𝙗𝙞𝙚̣̂𝙩 𝙚𝙢 𝙣𝙝𝙚́ ❤";
+	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝑡𝑢̛̣ 𝑐𝑢́𝑡" : "𝑏𝑖̣ 𝑞𝑢𝑎̉𝑛 𝑡𝑟𝑖̣ 𝑣𝑖𝑒̂𝑛 đ𝑢𝑜̂̉𝑖";
 	const path = join(__dirname, "cache", "leaveGif");
-	const gifPath = join(path, `${threadID}.gif`);
+	const gifPath = join(path, `bye.gif`);
 	var msg, formPush
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
 
-	(typeof data.customLeave == "undefined") ? msg = "𝘾𝙤𝙣 𝙫𝙤̛̣ {name} Đã {type} " : msg = data.customLeave;
+	(typeof data.customLeave == "undefined") ? msg = "𝐶𝑜𝑛 𝑣𝑜̛̣ {name} 𝑣𝑖̀ 𝑘ℎ𝑜̂𝑛𝑔 𝑡𝑎́𝑛 đ𝑜̂̉ 𝑒𝑚 𝑛𝑎̀𝑜 𝑛𝑒̂𝑛 đ𝑎̃ {type} 𝑘ℎ𝑜̉𝑖 𝑏𝑜𝑥.\n𝑉𝑖̃𝑛ℎ 𝑏𝑖𝑒̣̂𝑡 𝑒𝑚 𝑛ℎ𝑒́ 😿" : msg = data.customLeave;
 	msg = msg.replace(/\{name}/g, name).replace(/\{type}/g, type);
 
 	if (existsSync(gifPath)) formPush = { body: msg, attachment: createReadStream(gifPath) }
