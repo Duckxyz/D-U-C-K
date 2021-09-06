@@ -2,7 +2,7 @@ module.exports.config = {
     name: "chuilientuc",
     version: "1.0.0",
     hasPermssion: 1,
-    credits: "VanHung & Dựa trên demo của NTKhang",
+    credits: "...",
     description: "Tag liên tục người bạn tag trong 5 lần\nCó thể gọi là gọi hồn người đó",
     commandCategory: "group",
     usages: "chuilientuc @mention",
@@ -16,8 +16,7 @@ module.exports.config = {
 module.exports.run = async function({ api, args, Users, event}) {
     var mention = Object.keys(event.mentions)[0];
     if(!mention) return api.sendMessage("Cần phải tag 1 người bạn muốn chửi", event.threadID);
-    let data = await api.getUserInfo(mention);
-    let name = data[parseInt(mention)].name;
+ let name =  event.mentions[mention];
     var arraytag = [];
         arraytag.push({id: mention, tag: name});
     var a = function (a) { api.sendMessage(a, event.threadID); }
