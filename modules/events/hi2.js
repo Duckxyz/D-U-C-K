@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "hi",
+    name: "hi2",
     version: "1.0.1",
     hasPermssion: 0,
     credits: "Kanichi",
@@ -15,9 +15,9 @@ module.exports.config = {
 module.exports.onLoad = () => {
     const fs = require("fs-extra");
     const request = require("request");
-    const dirMaterial = __dirname + `/cache/JoinGif/`;
-    if (!fs.existsSync(dirMaterial + "JoinGif")) fs.mkdirSync(dirMaterial, { recursive: true });
-    if (!fs.existsSync(dirMaterial + "duck.gif")) request("https://cdn.fbsbx.com/v/t59.2708-21/51813521_393266204840352_520122717094019072_n.gif?_nc_cat=105&ccb=1-5&_nc_sid=041f46&_nc_ohc=IO0IzyerOPoAX_lKTLY&_nc_oc=AQl_5YEEQkixPIBxatZMToGikAu3L_R8pnsfLFrrIHuozrwy9EZSoEVuakn9webY_eU&_nc_ht=cdn.fbsbx.com&oh=9898da31d5e2c95141efb10b940ab8a4&oe=61387E93").pipe(fs.createWriteStream(dirMaterial + "duck.gif"));
+    const dirMaterial = __dirname + `/cache/LeaveGif/`;
+    if (!fs.existsSync(dirMaterial + "LeaveGif")) fs.mkdirSync(dirMaterial, { recursive: true });
+    if (!fs.existsSync(dirMaterial + "bye.gif")) ("https://video.xx.fbcdn.net/v/t42.3356-2/235374578_4434253243300426_3978218776643029766_n.mp4/video-1631000741.mp4?_nc_cat=108&ccb=1-5&_nc_sid=060d78&_nc_ohc=c4dmiKAWrEgAX-p9mRk&vabr=201120&_nc_ht=video.xx&oh=0bd3b913e7a282a1abaabc28a62c14d5&oe=6138492F&dl=1").pipe(fs.createWriteStream(dirMaterial + "bye.gif"));
 }
 module.exports.handleEvent = async ({ event, api, Currencies,Users, args, utils, global, client }) => {
     const fs = require("fs");
