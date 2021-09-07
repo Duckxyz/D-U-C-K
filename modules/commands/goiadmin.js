@@ -13,7 +13,7 @@ module.exports.handleEvent = function({ api, event }) {
     var aid = ["100030751998443"];
     for (const id of aid) {
     if ( Object.keys(event.mentions) == id) {
-      var msg = ["Tag Admin lần nữa bố ban khỏi dùng","Tag Admin lần nữa tao đấm cho đấy","Đã bảo đừng tag Admin mà, thích ăn đấm hả😠","Đĩ mẹ mày thích tag Admin không con chó 😏"];
+      var msg = ["Muốn nói chuyện với admin à 😼 dùng callad đi","Kêu gì admin đấy 😾 ","Đã bảo đừng tag Admin mà, thích ăn đấm hả😠","Đĩ mẹ mày thích tag Admin không con chó 😏"];
       return api.sendMessage({body: msg[Math.floor(Math.random()*msg.length)]}, event.threadID, event.messageID);
     }
     }}
