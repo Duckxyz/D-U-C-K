@@ -59,11 +59,11 @@
         "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
     },
     "sing": {
-        "YOUTUBE_API": "AIzaSyAp6SYNLaZq2Oni9mjoY8bPe7Wt0xdhFCU",
+        "YOUTUBE_API": "AIzaSyDftt1xq3d4OQnzLU-qnHv4Y1Un2tQj174",
         "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
     },
     "video": {
-        "YOUTUBE_API": "AIzaSyAp6SYNLaZq2Oni9mjoY8bPe7Wt0xdhFCU"
+        "YOUTUBE_API": "AIzaSyDftt1xq3d4OQnzLU-qnHv4Y1Un2tQj174"
     },
     "weather": {
         "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
@@ -74,7 +74,7 @@
     "adminUpdate": {
         "autoUnsend": true,
         "sendNoti": true,
-        "timeToUnsend": 10
+        "timeToUnsend": 20
     },
     "surprise": {
         "log": true,
@@ -83,27 +83,27 @@
         "delThread": ""
     },
     "covid": {
-        "APIKEY": "MEWVHJ1bmc7dHJ1bmdtYXJpb3ZqcEBnbWFpbC5"
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     },
     "hitbutt": {
         "APIKEY": ""
     },
     "img": {
-        "APIKEY": "MEWVHJ1bmc7dHJ1bmdtYXJpb3ZqcEBnbWFpbC5"
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     },
     "linkword": {
-        "APIKEY": "MEWVHJ1bmc7dHJ1bmdtYXJpb3ZqcEBnbWFpbC5"
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     },
     "sim": {
-        "APIKEY": "MEWVHJ1bmc7dHJ1bmdtYXJpb3ZqcEBnbWFpbC5"
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     },
     "slap": {
         "APIKEY": "MEWQmluZHo7YmludGFwaGFjaDFAZ21haWwuY29"
     },
     "sortword": {
-        "APIKEY": ""
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     },
     "teach": {
-        "APIKEY": ""
+        "APIKEY": "Meew_ZkBz6hDE75ptH2CMMuGj0lzlWQd7i6"
     }
 }
