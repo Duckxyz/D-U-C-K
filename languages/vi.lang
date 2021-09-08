@@ -60,7 +60,7 @@ users.needObject=Phải là một Object
 
 handleCommand.userBanned=Hiện tại bạn ngu quá nên đã bị cấm sử dụng bot!😏\n%1\n%2
 handleCommand.threadBanned=Hiện tại nhóm của bạn đang bị cấm sử dụng bot!\n%1\n%2
-handleCommand.commandNotExist=( \_/)(•.• )(> 3====D Đưa đb cho bạn thông não nè \n Bạn bị yêu Đức quá nên mới sài lệnh ngu như thế à 😼,có phải bạn  mún sử dụng lệnh "%1" hay không?
+handleCommand.commandNotExist=( \_/)\n(•.• )\n(> 3====D Đưa đb cho bạn thông não nè \n Bạn bị yêu Đức quá nên mới sài lệnh ngu như thế à 😼,có phải bạn  mún sử dụng lệnh "%1" hay không?
 handleCommand.commandThreadBanned=Nhóm bạn đã bị cấm sử dụng lệnh "%1"
 handleCommand.commandUserBanned=Bạn đã bị cấm sử dụng lệnh "%1"
 handleCommand.threadNotAllowNSFW=Nhóm của bạn không được phép sử dụng những lệnh NSFW
