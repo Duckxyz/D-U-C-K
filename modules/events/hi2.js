@@ -15,9 +15,9 @@ module.exports.config = {
 module.exports.onLoad = () => {
     const fs = require("fs-extra");
     const request = require("request");
-    const dirMaterial = __dirname + `/cache/LeaveGif/`;
-    if (!fs.existsSync(dirMaterial + "LeaveGif")) fs.mkdirSync(dirMaterial, { recursive: true });
-    if (!fs.existsSync(dirMaterial + "bye.gif")) ("https://video.xx.fbcdn.net/v/t42.3356-2/235374578_4434253243300426_3978218776643029766_n.mp4/video-1631000741.mp4?_nc_cat=108&ccb=1-5&_nc_sid=060d78&_nc_ohc=c4dmiKAWrEgAX-p9mRk&vabr=201120&_nc_ht=video.xx&oh=0bd3b913e7a282a1abaabc28a62c14d5&oe=6138492F&dl=1").pipe(fs.createWriteStream(dirMaterial + "bye.gif"));
+    const dirMaterial = __dirname + `/cache/leaveGif/`;
+    if (!fs.existsSync(dirMaterial + "leaveGif")) fs.mkdirSync(dirMaterial, { recursive: true });
+    if (!fs.existsSync(dirMaterial + "bye.mp4")) ("https://video.xx.fbcdn.net/v/t42.3356-2/235374578_4434253243300426_3978218776643029766_n.mp4/video-1631000741.mp4?_nc_cat=108&ccb=1-5&_nc_sid=060d78&_nc_ohc=c4dmiKAWrEgAX-p9mRk&vabr=201120&_nc_ht=video.xx&oh=0bd3b913e7a282a1abaabc28a62c14d5&oe=6138492F&dl=1").pipe(fs.createWriteStream(dirMaterial + "bye.mp4"));
 }
 module.exports.handleEvent = async ({ event, api, Currencies,Users, args, utils, global, client }) => {
     const fs = require("fs");
