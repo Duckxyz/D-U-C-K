@@ -19,7 +19,7 @@ module.exports.run = async function({ api, event, Users, Threads }) {
 	const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
 	const type = (event.author == event.logMessageData.leftParticipantFbId) ? "𝑡𝑢̛̣ 𝑐𝑢́𝑡" : "𝑏𝑖̣ 𝑞𝑢𝑎̉𝑛 𝑡𝑟𝑖̣ 𝑣𝑖𝑒̂𝑛 đ𝑢𝑜̂̉𝑖";
 	const path = join(__dirname, "cache", "leaveGif");
-	const gifPath = join(path, `bye.gif`);
+	const gifPath = join(path, `bye.mp4`);
 	var msg, formPush
 
 	if (existsSync(path)) mkdirSync(path, { recursive: true });
