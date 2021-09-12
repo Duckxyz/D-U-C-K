@@ -59,11 +59,11 @@
         "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
     },
     "sing": {
-        "YOUTUBE_API": "AIzaSyDftt1xq3d4OQnzLU-qnHv4Y1Un2tQj174",
+        "YOUTUBE_API": "AIzaSyB1TRwtnfbTokqn5mo1z-ZIttK__pEpaDw",
         "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
     },
     "video": {
-        "YOUTUBE_API": "AIzaSyDftt1xq3d4OQnzLU-qnHv4Y1Un2tQj174"
+        "YOUTUBE_API": "AIzaSyB1TRwtnfbTokqn5mo1z-ZIttK__pEpaDw"
     },
     "weather": {
         "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
@@ -86,7 +86,7 @@
         "APIKEY": "Meew_1shyMTQhZ58zLigA7tbGlWffNZBI3g"
     },
     "hitbutt": {
-        "APIKEY": ""
+        "APIKEY": "Meew_1shyMTQhZ58zLigA7tbGlWffNZBI3g"
     },
     "img": {
         "APIKEY": "Meew_1shyMTQhZ58zLigA7tbGlWffNZBI3g"
