@@ -1,5 +1,3 @@
-const fs = require("fs");
-const axios = require('axios');
 module.exports.config = {
   name: "ghep",
   version: "1.0.0", 
@@ -7,11 +5,12 @@ module.exports.config = {
   credits: "Hungcho edit by Hungdz30cm",
   description: "Ghep doi ngau nhien",
   commandCategory: "random-img", 
-  usages: "ghep", 
+  usages: "", 
   cooldowns: 0,
-  dependencies: [] 
 };
 module.exports.run = async function({ api, event, args, Users, Threads, Currencies }) {
+        const axios = global.nodemodule["axios"];
+        const fs = global.nodemodule["fs-extra"];
         var data = await Currencies.getData(event.senderID);
         var money = data.money
         if(money < 500) api.sendMessage("Bạn cần 500 đô cho 1 lần ghép hãy tích cực làm việc hoặc xin admin bot!\n🤑Có làm mới có ăn🤑",event.threadID,event.messageID)
@@ -33,9 +32,9 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
         var sex = await data[id].gender;
         var gender = sex == 2 ? "Nam🧑" : sex == 1 ? "Nữ👩‍🦰" : "Trần Đức Bo";
         Currencies.setData(event.senderID, options = {money: money - 500})
-        let Avatar = (await axios.get( `https://graph.facebook.com/${id}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`, { responseType: "arraybuffer" } )).data;
+        let Avatar = (await axios.get( `https://graph.facebook.com/${id}/picture?height=720&width=720&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`, { responseType: "arraybuffer" } )).data;
             fs.writeFileSync( __dirname + "/cache/avt.png", Buffer.from(Avatar, "utf-8") );
-        let Avatar2 = (await axios.get( `https://graph.facebook.com/${event.senderID}/picture?width=512&height=512&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`, { responseType: "arraybuffer" } )).data;
+        let Avatar2 = (await axios.get( `https://graph.facebook.com/${event.senderID}/picture?height=720&width=720&access_token=170440784240186|bc82258eaaf93ee5b9f577a8d401bfc9`, { responseType: "arraybuffer" } )).data;
             fs.writeFileSync( __dirname + "/cache/avt2.png", Buffer.from(Avatar2, "utf-8") );
         var imglove = [];
               imglove.push(fs.createReadStream(__dirname + "/cache/avt.png"));
