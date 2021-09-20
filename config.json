@@ -59,11 +59,11 @@
         "SAUCENAO_API": "61e802b1478f8e85198f28ed6ac2de6efe5d0a41"
     },
     "sing": {
-        "YOUTUBE_API": "AIzaSyB1TRwtnfbTokqn5mo1z-ZIttK__pEpaDw",
+        "YOUTUBE_API": "AIzaSyD7VEpaAKcLqyVdKTUsnLoiKuZno-H1xtE",
         "SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
     },
     "video": {
-        "YOUTUBE_API": "AIzaSyB1TRwtnfbTokqn5mo1z-ZIttK__pEpaDw"
+        "YOUTUBE_API": "AIzaSyD7VEpaAKcLqyVdKTUsnLoiKuZno-H1xtE"
     },
     "weather": {
         "OPEN_WEATHER": "081c82065cfee62cb7988ddf90914bdd"
