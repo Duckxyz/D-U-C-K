@@ -14,6 +14,7 @@
     "PREFIX": "!",
     "ADMINBOT": [
         "100030751998443",
+        ""
     ],
     "DATABASE": {
         "sqlite": {
