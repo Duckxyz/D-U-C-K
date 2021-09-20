@@ -15,7 +15,7 @@ module.exports.config = {
 		"axios": ""
 	},
 	envConfig: {
-		"YOUTUBE_API": "AIzaSyB1TRwtnfbTokqn5mo1z-ZIttK__pEpaDw",
+		"YOUTUBE_API": "AIzaSyD7VEpaAKcLqyVdKTUsnLoiKuZno-H1xtE",
 		"SOUNDCLOUD_API": "M4TSyS6eV0AcMynXkA3qQASGcOFQTWub"
 	}
 };
